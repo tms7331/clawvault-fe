@@ -348,7 +348,7 @@
 
 <footer>
   <div class="container">
-    <div>Powered by <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw</a> &middot; ERC-8021 Builder Codes &middot; Base</div>
+    <div>Powered by <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw</a> &middot; ERC-8021 Builder Codes &middot; Base Sepolia</div>
     <div class="refresh-timer" id="refresh-timer"></div>
   </div>
 </footer>
@@ -469,7 +469,7 @@
   // ---------------------------------------------------------------------------
 
   const DEFAULTS = {
-    rpc:       'http://127.0.0.1:8545',
+    rpc:       'https://sepolia.base.org',
     usdc:      '0x0000000000000000000000000000000000000000',
     vault:     '0x0000000000000000000000000000000000000000',
     router:    '0x0000000000000000000000000000000000000000',
@@ -667,7 +667,7 @@
     const dot = document.getElementById('status-dot');
     dot.classList.remove('error');
     document.getElementById('agent-address').innerHTML =
-      'Viewing: <a class="hash-link" href="https://basescan.org/address/' +
+      'Viewing: <a class="hash-link" href="https://sepolia.basescan.org/address/' +
       params.wallet + '" target="_blank" rel="noopener">' + truncAddr(params.wallet) + '</a>';
 
     // Vault position
@@ -696,7 +696,7 @@
     document.getElementById('annual-yield').textContent = (data.yieldBps / 100).toFixed(1) + '%';
     document.getElementById('mgmt-fee').textContent = (data.feeBps / 100).toFixed(1) + '%';
     document.getElementById('agent-wallet').innerHTML =
-      '<a class="hash-link" href="https://basescan.org/address/' +
+      '<a class="hash-link" href="https://sepolia.basescan.org/address/' +
       data.agentAddr + '" target="_blank" rel="noopener">' + truncAddr(data.agentAddr) + '</a>';
     document.getElementById('vault-balance').textContent = formatUsdc(data.vaultUsdcBal);
   }
