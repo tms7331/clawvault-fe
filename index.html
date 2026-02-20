@@ -349,7 +349,7 @@
 
 <footer>
   <div class="container">
-    <div>Powered by <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw</a> &middot; ERC-8021 Builder Codes &middot; Base Sepolia</div>
+    <div>Powered by <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw</a> &middot; ERC-8021 Builder Codes &middot; Ethereum Sepolia</div>
     <div class="refresh-timer" id="refresh-timer"></div>
   </div>
 </footer>
@@ -470,13 +470,13 @@
   // ---------------------------------------------------------------------------
 
   const DEFAULTS = {
-    rpc:       'https://sepolia.base.org',
-    usdc:      '0x0000000000000000000000000000000000000000',
-    vault:     '0x0000000000000000000000000000000000000000',
-    router:    '0x0000000000000000000000000000000000000000',
-    rehedge:   '0x0000000000000000000000000000000000000000',
-    sphedge:   '0x0000000000000000000000000000000000000000',
-    bondhedge: '0x0000000000000000000000000000000000000000',
+    rpc:       'https://ethereum-sepolia-rpc.publicnode.com',
+    usdc:      '0x0e233Cb8B535dE5fB9AF47516Df02F5b0DB46EBD',
+    vault:     '0xfa448Bc02f6001Ec3c0433F29eD55d04d994bD76',
+    router:    '0x349C43fFf432059c968aE81F297136FAA0E2e342',
+    rehedge:   '0x14a47990A725E5Bfdb56773aF5650bd4cf6613fD',
+    sphedge:   '0xfEc612566550F6908A20bC39Cb548181470bfb2a',
+    bondhedge: '0xa312664238ea24BEE9289629bB231d6DD1Fc982F',
   };
 
   // ---------------------------------------------------------------------------
@@ -668,7 +668,7 @@
     const dot = document.getElementById('status-dot');
     dot.classList.remove('error');
     document.getElementById('agent-address').innerHTML =
-      'Viewing: <a class="hash-link" href="https://sepolia.basescan.org/address/' +
+      'Viewing: <a class="hash-link" href="https://sepolia.etherscan.io/address/' +
       params.wallet + '" target="_blank" rel="noopener">' + truncAddr(params.wallet) + '</a>';
 
     // Vault position
@@ -697,7 +697,7 @@
     document.getElementById('annual-yield').textContent = (data.yieldBps / 100).toFixed(1) + '%';
     document.getElementById('mgmt-fee').textContent = (data.feeBps / 100).toFixed(1) + '%';
     document.getElementById('agent-wallet').innerHTML =
-      '<a class="hash-link" href="https://sepolia.basescan.org/address/' +
+      '<a class="hash-link" href="https://sepolia.etherscan.io/address/' +
       data.agentAddr + '" target="_blank" rel="noopener">' + truncAddr(data.agentAddr) + '</a>';
     document.getElementById('vault-balance').textContent = formatUsdc(data.vaultUsdcBal);
   }
